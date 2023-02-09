@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <body>
+  <nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top">
+    <div class="container">
+        <div>
+            <a href="" class="navbar-brand">
+                <button class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+  <section id="home">
+      <div class="container" style="max-width: 990px">
+            <div class="row">
+                <div class="col-lg-6 custom-col">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="fa fa-envelope-open-text"></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="fa fa-discord"></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="fa fa-telegram"></a>
+                        </li>
+
+                    </ul>
+                    <h1 class="display-3">Hi, I am Nayyar Abbas</h1>
+                    <p class="lead">I am a professional python developer with one year of experience in web scraping and web development.</p>
+                <div class="d-flex">
+                    <a href="" class="btn btn-outline-dark mr-3 p-2">My portfolio</a>
+                    <a href="" class="btn btn-outline-dark p-2"> <i class="fas fa-caret-right"> </i></a>
+                </div>
+                </div>
+            </div>
+      </div>
+  </section>
+     </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>

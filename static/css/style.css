@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#main-nav{
+    background: transparent;
+}
+section{
+    height: 100vh;
+}
+#home{
+    background: url("/static/images/babaupscaled.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.custom-col{
+    margin-top: 20%;
+}
+i{
+    color: black;
+}
