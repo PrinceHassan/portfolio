@@ -12,6 +12,10 @@ html::-webkit-scrollbar {
 section{
     height: 100vh;
 }
+
+.width-limit{
+    max-width: 990px;
+}
 #home{
     background: url("/static/images/perfect.jpg");
     background-position: top;
@@ -24,4 +28,13 @@ section{
 }
 i{
     color: black;
+}
+img{
+    filter: grayscale(1);
+}
+.img-hero{
+    height: auto;
+}
+.spacing{
+    margin-top: 10%;
 }
