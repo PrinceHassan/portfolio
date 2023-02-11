@@ -38,3 +38,48 @@ img{
 .spacing{
     margin-top: 10%;
 }
+.green-box{
+    margin-top: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    margin-left: 15px;
+}
+.level-container{
+    display: flex;
+    margin-left: 50px;
+
+}
+
+.blockx{
+    display: inline-flex;
+    margin-left: 50px;
+}
+
+.orange-box{
+    margin-top: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: orange;
+    margin-left: 15px;
+}
+.gray-box{
+    margin-top: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    margin-left: 15px;
+}
+
+.card-icon{
+    font-size: 1.4rem;
+}
+.block{
+    height: 0.3rem;
+    width: 8rem;
+    background-color: #000000;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
