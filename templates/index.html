@@ -219,31 +219,35 @@
 
         <div class="typing-area">
             <div class="input-field">
-                <input type="text" id="input-field" placeholder="Type your message" required>
+                <input type="text" id="input-field" maxLength="80" placeholder="Type your message" required>
                 <button id="sendButton">Send</button>
             </div>
         </div>
     </div>
 <script>
   document.getElementById("sendButton").addEventListener("click", function() {
+      inputJam(true);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/reply_bot/");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    // Get the input field value
     var inputData = document.getElementById("input-field").value;
-    alert("started");
     xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
         // Step 3: Update the HTML with the response
+          inputJam(false);
           let response = JSON.parse(xhr.responseText);
         document.getElementById("chatArea").innerHTML += response.userm;
         document.getElementById("chatArea").innerHTML += response.resp;
-        window.scroll(0, window.scrollY + 200);
+        document.getElementById("input-field").value = '';
+        window.scroll(0, window.scrollY + 500);
       }
     };
-    // Send the request with the input data
     xhr.send("input_data=" + inputData);
   });
+
+  function inputJam(status){
+      document.getElementById("input-field").disabled = status;
+  }
 </script>
 
 
