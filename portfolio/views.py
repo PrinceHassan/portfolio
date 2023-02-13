@@ -14,16 +14,18 @@ def reply_bot(request):
     openai.api_key = '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'
     try:
         response = openai.Completion.create(
-            model="text-davinci-003",
+            model="davinci:ft-personal-2023-02-12-17-35-55",
             prompt=message,
             temperature=0.9,
-            max_tokens=50,
+            max_tokens=30,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0.6,
         )
-        response = response['choices'][0]['text']
-    except:
+        print(response)
+        response = response['choices'][0]['text'].split('END')[0]
+    except Exception as e:
+        print(e)
         response = "Some error occurred, please contact Nayyar Abbas"
     user_message = f'<br clear="both"> <div class="item right"> <div class="msg"> <p>{message}</p> </div> </div>'
     response_data = f'<div class="item"><div class="icon"><i class="fa fa-user"></i></div><div class="msg"><p>{response}</p></div></div>'
