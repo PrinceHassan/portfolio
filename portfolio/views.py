@@ -7,15 +7,18 @@ import openai
 def index(request):
     return render(request, "index.html")
 
-
+# davinci:ft-personal-2023-02-12-17-35-55
 # @csrf_exempt
 def reply_bot(request):
     message = request.POST.get("input_data")
-    openai.api_key = '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'
+    context = '''Keeping in mind the following data, answer the question,also greet the users, tell them that you provide your services on Upwork and Fiverr:
+    {"name":"Nayyar Abbas", "services":"web development, web scraping, games development, data visualization", "web development skill":"Master", "game dev skill":"Entry level", "web scraping skill":"master", "data visualization skill":"intermmediate", "web dev tools": "Python, Django, Flask, Php, react", "game dev tools": "Unity", "scraping tools": "python beautifulsoup pandas selenium and requests", "phone number":"+923338043673", "email":"ph0150163@gmail.com"}
+    Question: '''
+    openai.api_key = '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'
     try:
         response = openai.Completion.create(
-            model="davinci:ft-personal-2023-02-12-17-35-55",
-            prompt=message,
+            model="text-davinci-003",
+            prompt=context + message,
             temperature=0.9,
             max_tokens=30,
             top_p=1,
@@ -23,7 +26,7 @@ def reply_bot(request):
             presence_penalty=0.6,
         )
         print(response)
-        response = response['choices'][0]['text'].split('END')[0]
+        response = response['choices'][0]['text']
     except Exception as e:
         print(e)
         response = "Some error occurred, please contact Nayyar Abbas"
