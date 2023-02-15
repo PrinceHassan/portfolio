@@ -18,7 +18,7 @@ def reply_bot(request):
     try:
         response = openai.Completion.create(
             model="text-davinci-003",
-            prompt=context + message,
+            prompt=message,
             temperature=0.9,
             max_tokens=30,
             top_p=1,

@@ -61,8 +61,8 @@
                     <h1 class="display-3">Hi, I am Nayyar Abbas</h1>
                     <p class="lead">I am a professional python developer with one year of experience in web scraping and web development.</p>
                 <div class="d-flex">
-                    <a href="" class="btn btn-outline-dark mr-3 p-2">My portfolio</a>
-                    <a href="" class="btn btn-outline-dark p-2"> <i class="fas fa-caret-right"> </i></a>
+                    <a href="#portfolio" class="btn btn-outline-dark mr-3 p-2">My portfolio</a>
+                    <a href="#portfolio" class="btn btn-outline-dark p-2"> <i class="fas fa-caret-right"> </i></a>
                 </div>
                 </div>
             </div>
@@ -185,34 +185,29 @@
   </section>
 
  <div class="wrapper">
-        <div class="title">Simple Chatbot</div>
+        <div class="title">GPT-3 integrated ChatBot</div>
         <div class="box" id="chatArea">
             <div class="item">
                 <div class="icon">
                     <i class="fa fa-user"></i>
                 </div>
                 <div class="msg">
-                    <p>Hello everyone, How are you?</p>
+                    <p>Hello dear visitor! I am GPT-3!</p>
                 </div>
             </div>
             <br clear="both">
             <div class="item right">
                 <div class="msg">
-                    <p>Nice</p>
+                    <p>Very nice!</p>
                 </div>
             </div>
-            <br clear="both">
-            <div class="item right">
-                <div class="msg">
-                    <p>wbu?</p>
-                </div>
-            </div>
+            
             <div class="item">
                 <div class="icon">
                     <i class="fa fa-user"></i>
                 </div>
                 <div class="msg">
-                    <p>Imma doin crazy</p>
+                    <p>Ask me anything!</p>
                 </div>
             </div>
         </div>
@@ -239,7 +234,10 @@
         document.getElementById("chatArea").innerHTML += response.userm;
         document.getElementById("chatArea").innerHTML += response.resp;
         document.getElementById("input-field").value = '';
-        window.scroll(0, window.scrollY + 500);
+	  var objDiv = document.getElementById("chatArea");
+	  objDiv.scrollTop = objDiv.scrollHeight;
+	  document.getElementById("input-field").click();
+		
       }
     };
     xhr.send("input_data=" + inputData);
@@ -248,6 +246,15 @@
   function inputJam(status){
       document.getElementById("input-field").disabled = status;
   }
+document.addEventListener('keydown', function(event) {
+  if (event.code === 'Enter') {
+    // Get a reference to the button you want to click
+    var button = document.getElementById('sendButton');
+    // Simulate a button click
+    button.click();
+	console.log("Button is triggered!");
+  }
+});
 </script>
 
 

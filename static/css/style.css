@@ -23,7 +23,7 @@ section{
     max-width: 990px;
 }
 #home{
-    background: url("/static/images/perfect.jpg");
+    background: url("/static/images/perfect3.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,4 +223,13 @@ img{
 .wrapper .typing-area .input-field input:valid ~ button {
     opacity: 1;
     pointer-events: auto;
+}
+#chatArea{
+	overflow-y: scroll;
+	background-color: grey;
+}
+
+.wrapper{
+position: fixed;
+    bottom: 0;
 }
